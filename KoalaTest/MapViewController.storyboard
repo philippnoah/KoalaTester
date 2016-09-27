@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q5K-kT-WZP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="Jlg-4Z-gxo">
+            <objects>
+                <viewController id="Q5K-kT-WZP" customClass="MapViewController" customModule="KoalaTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="spS-f6-QLa"/>
+                        <viewControllerLayoutGuide type="bottom" id="1LX-EK-6Mz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EwU-TB-dhI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JpE-2w-cAk"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URS-xJ-0Mn">
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4O-oI-q4W">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuo-q2-Bcw">
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="7BU-Zd-2a2"/>
+                                                </constraints>
+                                                <state key="normal" title="Add route"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="xuo-q2-Bcw" secondAttribute="trailing" constant="167" id="0ut-7Q-6c8"/>
+                                            <constraint firstItem="xuo-q2-Bcw" firstAttribute="centerY" secondItem="c4O-oI-q4W" secondAttribute="centerY" id="Tmo-Zz-deY"/>
+                                            <constraint firstItem="xuo-q2-Bcw" firstAttribute="leading" secondItem="c4O-oI-q4W" secondAttribute="leadingMargin" id="Zz0-io-P44"/>
+                                            <constraint firstAttribute="bottom" secondItem="xuo-q2-Bcw" secondAttribute="bottom" constant="17" id="s6a-AE-7Pc"/>
+                                            <constraint firstItem="xuo-q2-Bcw" firstAttribute="top" secondItem="c4O-oI-q4W" secondAttribute="top" constant="16" id="yTI-qJ-P6f"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.011764705882352941" green="0.61568627450980395" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="c4O-oI-q4W" firstAttribute="leading" secondItem="URS-xJ-0Mn" secondAttribute="leading" id="Zyx-ss-gCd"/>
+                                    <constraint firstItem="c4O-oI-q4W" firstAttribute="centerY" secondItem="URS-xJ-0Mn" secondAttribute="centerY" id="dNE-zk-PEF"/>
+                                    <constraint firstAttribute="trailing" secondItem="c4O-oI-q4W" secondAttribute="trailing" id="jGA-nS-Dta"/>
+                                    <constraint firstItem="c4O-oI-q4W" firstAttribute="top" secondItem="URS-xJ-0Mn" secondAttribute="top" constant="51" id="m3g-aN-t88"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjU-vu-FlO">
+                                <color key="backgroundColor" red="0.21176470588235294" green="0.61568627450980395" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.21176470588235294" green="0.61568627450980395" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="My Trips" prompt="#" id="vxA-7S-ij3"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JpE-2w-cAk" secondAttribute="trailing" id="5dV-74-uC5"/>
+                            <constraint firstItem="URS-xJ-0Mn" firstAttribute="top" secondItem="EwU-TB-dhI" secondAttribute="top" constant="332" id="EGj-fg-htd"/>
+                            <constraint firstItem="yjU-vu-FlO" firstAttribute="leading" secondItem="URS-xJ-0Mn" secondAttribute="leading" id="Et3-Yb-6gE"/>
+                            <constraint firstItem="JpE-2w-cAk" firstAttribute="bottom" secondItem="1LX-EK-6Mz" secondAttribute="top" id="ONo-ak-J9s"/>
+                            <constraint firstItem="URS-xJ-0Mn" firstAttribute="bottom" secondItem="1LX-EK-6Mz" secondAttribute="top" id="Pzv-X6-kJQ"/>
+                            <constraint firstItem="JpE-2w-cAk" firstAttribute="leading" secondItem="EwU-TB-dhI" secondAttribute="leading" id="Y7I-LS-Vyu"/>
+                            <constraint firstItem="JpE-2w-cAk" firstAttribute="top" secondItem="EwU-TB-dhI" secondAttribute="top" id="Z2f-4g-GSf"/>
+                            <constraint firstItem="yjU-vu-FlO" firstAttribute="trailing" secondItem="JpE-2w-cAk" secondAttribute="trailing" id="gqb-x2-AQm"/>
+                            <constraint firstItem="JpE-2w-cAk" firstAttribute="leading" secondItem="URS-xJ-0Mn" secondAttribute="leading" id="ivg-wD-8rq"/>
+                            <constraint firstItem="JpE-2w-cAk" firstAttribute="trailing" secondItem="URS-xJ-0Mn" secondAttribute="trailing" id="pUu-kH-egL"/>
+                            <constraint firstItem="yjU-vu-FlO" firstAttribute="top" secondItem="EwU-TB-dhI" secondAttribute="topMargin" constant="-10" id="pVQ-Fk-6IX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="JpE-2w-cAk" id="OsT-1t-UNN"/>
+                        <outlet property="scrollView" destination="c4O-oI-q4W" id="d62-Ap-wSZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yf-Yo-IDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="104.7976011994003"/>
+        </scene>
+    </scenes>
+</document>

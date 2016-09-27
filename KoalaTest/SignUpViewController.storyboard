@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ltV-et-VNp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="SLu-gT-Guk">
+            <objects>
+                <viewController id="ltV-et-VNp" customClass="SignUpViewController" customModule="KoalaTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gIm-xq-fmD"/>
+                        <viewControllerLayoutGuide type="bottom" id="iyJ-R2-2fs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ynJ-Ng-2Pl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="koala" translatesAutoresizingMaskIntoConstraints="NO" id="OBA-uf-wMD"/>
+                        </subviews>
+                        <color key="backgroundColor" red="0.011764705882352941" green="0.61568627450980395" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="OBA-uf-wMD" firstAttribute="centerX" secondItem="ynJ-Ng-2Pl" secondAttribute="centerX" id="Ibt-fn-GAx"/>
+                            <constraint firstItem="OBA-uf-wMD" firstAttribute="top" secondItem="gIm-xq-fmD" secondAttribute="bottom" constant="87" id="m4j-s0-MBP"/>
+                            <constraint firstItem="iyJ-R2-2fs" firstAttribute="top" secondItem="OBA-uf-wMD" secondAttribute="bottom" constant="360" id="sGd-qP-347"/>
+                            <constraint firstItem="OBA-uf-wMD" firstAttribute="leading" secondItem="ynJ-Ng-2Pl" secondAttribute="leadingMargin" constant="71" id="zMX-D9-JWP"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="iC1-d4-k1N" appends="YES" id="hR2-1D-69j"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <segue destination="tOe-bQ-TdL" kind="show" identifier="signUpToLogin" animates="NO" id="7sJ-fW-ygE"/>
+                        <segue destination="HNu-s5-CEA" kind="show" identifier="signUpToWaiting" id="EGe-NB-1cy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XIZ-J5-mts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="iC1-d4-k1N">
+                    <connections>
+                        <action selector="recognizedSwipeRight:" destination="ltV-et-VNp" id="NVH-uO-8E4"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="143" y="125"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="UIV-Ip-Rhq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LoginViewController" id="tOe-bQ-TdL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RwD-d3-gxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="70"/>
+        </scene>
+        <!--WaitingViewController-->
+        <scene sceneID="jSN-xT-ZLl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WaitingViewController" id="HNu-s5-CEA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYw-RG-cTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="172"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="koala" width="3200" height="2000"/>
+    </resources>
+</document>

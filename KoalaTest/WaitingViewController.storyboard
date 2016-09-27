@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SbU-Bk-com">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Waiting View Controller-->
+        <scene sceneID="1MJ-Cl-Wcl">
+            <objects>
+                <viewController id="SbU-Bk-com" customClass="WaitingViewController" customModule="KoalaTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="soj-zy-9ve"/>
+                        <viewControllerLayoutGuide type="bottom" id="zzD-RO-ro6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ha-Uw-CiR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="X5o-qo-y7O" kind="show" identifier="waitingToMap" id="qH4-ov-eoA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NxV-UY-crU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="156"/>
+        </scene>
+        <!--MapViewController-->
+        <scene sceneID="SX0-j2-8oQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MapViewController" id="X5o-qo-y7O" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WaG-rX-8u5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="155"/>
+        </scene>
+    </scenes>
+</document>
